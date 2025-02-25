@@ -1,25 +1,4 @@
 @font-face {
-  font-family: "uncut";
-  src: url("fonts/uncut-sans/Uncut-Sans-Regular.otf") format("opentype");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "uncut-med";
-  src: url("fonts/uncut-sans/Uncut-Sans-Medium.otf") format("opentype");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "uncut-semibold";
-  src: url("fonts/uncut-sans/Uncut-Sans-Semibold.otf") format("opentype");
-  font-weight: bold;
-  font-style: normal;
-}
-
-@font-face {
   font-family: "JetBrains";
   src: url("fonts/JetBrainsMono/JetBrainsMono-Regular.ttf") format("opentype");
   font-weight: bold;
@@ -28,9 +7,7 @@
 
 :root {
   --width: 600px;
-  --font-main: "uncut";
-  --font-semibold: "uncut-semibold";
-  --font-med: "uncut-med";
+  --font-main: "Bricolage Grotesque", serif;
   --font-code: "JetBrains";
   --font-scale: 1em;
 
@@ -92,7 +69,8 @@ h6 {
 }
 
 h1 {
-  font-size: 3.5em;
+  font-size: 5em;
+  font-weight: 500;
   font-family: var(--font-main);
   letter-spacing: -0.025em;
   line-height: 1.2;
