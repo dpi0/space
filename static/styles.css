@@ -21,6 +21,11 @@
   --selection-bg: var(--accent);
   --selection-text: var(--bg);
   --link-bg: #f6faff;
+  --glow-bg: radial-gradient(
+    circle at center,
+    rgba(32, 138, 244, 0.7),
+    rgba(255, 255, 255, 0)
+  );
   --time: #6b7280;
 }
 
@@ -37,6 +42,11 @@
     --selection-text: var(--bg);
     --link-bg: #151515;
     --time: #6b7280;
+    --glow-bg: radial-gradient(
+      circle at center,
+      rgba(49, 159, 255, 0.9),
+      rgba(0, 0, 0, 0)
+    );
   }
 }
 
@@ -69,7 +79,7 @@ h6 {
 }
 
 h1 {
-  font-size: 5em;
+  font-size: 4.5em;
   font-weight: 500;
   font-family: var(--font-main);
   letter-spacing: -0.025em;
@@ -79,6 +89,24 @@ h1 {
   text-decoration-color: var(--link);
   color: var(--link);
   color: var(--heading);
+  position: relative;
+  z-index: 1;
+  padding: 20px;
+  display: inline-block;
+}
+
+h1::before {
+  content: "";
+  position: absolute;
+  top: -40px;
+  left: -45px;
+  right: -30px;
+  bottom: -20px;
+  background: var(--glow-bg);
+  filter: blur(50px);
+  z-index: -1;
+  border-radius: 100%;
+  opacity: 0.4;
 }
 
 h2 {
@@ -95,7 +123,6 @@ h4 a,
 h5 a {
   color: var(--heading);
   text-decoration: none;
-  background-color: var(--link-bg);
 }
 
 nav {
@@ -109,8 +136,8 @@ nav a {
 }
 
 .navbar-link.active {
-  color: var(--text); /* Active link color */
-  font-weight: bold; /* Optional enhancement */
+  color: var(--text);
+  font-weight: bold;
 }
 
 nav a {
@@ -127,7 +154,7 @@ a {
   color: var(--link);
   cursor: pointer;
   text-decoration: underline;
-  background-color: var(--link-bg);
+  padding: 2px 2px;
 }
 
 a:hover {
